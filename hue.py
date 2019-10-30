@@ -68,7 +68,7 @@ class BridgeLocator:
         self.bridgesById = {}
 
         # First try nupnp
-        r = requests.get('http://www.meethue.com/api/nupnp', timeout=2)
+        r = requests.get('https://discovery.meethue.com/', timeout=2)
         if r.status_code == 200:
             bridgelist = r.json()
             
